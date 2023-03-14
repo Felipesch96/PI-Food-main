@@ -1,0 +1,50 @@
+.success{
+    font-size: 28px;
+    display: flex;
+    border-radius: 2em;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(66, 167, 57);
+}
+
+.createContainer{
+    justify-content: center;
+    padding-top: 3em;
+}
+
+.create{
+    color: rgb(128, 128, 128);
+    font-size: 35px;
+    text-decoration: underline;
+
+}
+
+.inputError{
+    font-size: 22px;
+    color: salmon;
+}
+
+.createInput{
+    padding-left: 4mm;
+    width: 260px;
+    height: 25px;
+    margin-right: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background-color: rgb(191, 174, 209);
+    border-radius: 10px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 1em;
+
+}
+
+.createInput:hover{
+    transition: ease-in 3s;
+    background-color: transparent;
+}
+
+.msgbtn{
+    color: antiquewhite;
+    font-size: 22px;
+}

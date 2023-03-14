@@ -1,0 +1,44 @@
+en controllers: 
+
+router.put("/", (req, res) => {
+  const { id, name, resume, healthscore, steps, image } = req.body;
+  if (!id || !name || !resume || !healthscore || !steps || !image)
+    return res.status(400).send({ error: "missing info" });
+
+  const modedRecipe = modedRecipe(id, name, resume, healthscore, steps, image);
+
+  if (modedRecipe["error"]) return res.status(400).send(modedRecipe);
+  else return res.status(200).modedRecipe(modedRecipe);
+});
+
+router.delete("/", (req, res) => {
+  const { id } = req.params;
+  const deletedRecipe = deleteUser(id);
+  if (deletedRecipe["error"]) return res.status(400).send(deletedRecipe);
+  else res.status(200).send(deletedRecipe);
+});
+
+
+
+en helpers:
+
+const modRecipe = (id, name, resume, healthscore, steps, image) => {
+    const recipe = Recipe.findByPk(id)
+
+    if (!recipe) return { error: "recipe not found" };
+  
+    recipe.name = name;
+    recipe.resume = resume;
+    recipe.healthscore = healthscore;
+    recipe.steps = steps;
+    recipe.image = image;
+  
+    return recipe;
+  };
+  
+  
+  const deleteRecipe = (id) => {
+      return Recipe.destroy({where: { id: id }})
+  };
+
+  module.exports = { deleteRecipe, modRecipe}

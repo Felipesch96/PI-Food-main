@@ -1,0 +1,50 @@
+
+
+.recipeName{
+    height: 1.5em;
+    justify-content: center;
+    color: rgb(26, 27, 28);
+    background-color: rgb(115, 101, 101);
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.diets{
+    color: rgb(182, 182, 140);
+    /* width: 30em;
+    margin-left: 4em; */
+    
+}
+
+.name:hover{
+    transition: .25s;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5%;
+}
+
+.card{
+    justify-content: center;
+    text-decoration: none;
+    background-color: rgb(246, 218, 183);
+    width: auto;
+    height: auto;
+    margin: 1em;
+    border-radius: 3em;
+    opacity: 100%;
+    
+    
+}
+
+.card:hover{
+    opacity: 75%;
+    transition: .5s;
+}
